@@ -15,4 +15,4 @@ The following shows one screenshot for each of the two apps:
     <img alt="Screenshot of test app" src="screenshots/test_app.png" style="margin: 0 auto;" height="100%" width="25%" >
 </p>
 
-Note that the word 'consent' assumes use under the EU GDPR, while applications in California would need a different wording. The purpose of this proof of concept is, however, solely demonstrate technical feasibility rather than UI design.
+Note that the word 'consent' assumes use under the EU GDPR, while applications in California would need a different wording. The purpose of this proof of concept is solely to demonstrate technical feasibility rather than UI design.
