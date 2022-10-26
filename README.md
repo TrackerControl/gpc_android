@@ -1,6 +1,6 @@
 # Global Privacy Control (GPC) for Android: Proof of Concept
 
-THIS CODE IS FOR PRODUCTION USE
+THIS CODE IS NOT FOR PRODUCTION USE
 
 This repository contains a **PROOF OF CONCEPT** implementation of the [Global Privacy Control (GPC)](https://globalprivacycontrol.org) for Android.
 
