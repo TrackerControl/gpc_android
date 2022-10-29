@@ -1,4 +1,4 @@
-package net.kollnig.consent.gpc_android.test;
+package net.kollnig.gpc_android.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         nonce = UUID.randomUUID().toString();
         Intent myIntent = new Intent();
-        myIntent.setClassName("net.kollnig.consent.gpc_android", "net.kollnig.consent.gpc_android.ConsentActivity");
+        myIntent.setClassName("net.kollnig.gpc_android", "net.kollnig.gpc_android.ConsentActivity");
         myIntent.putExtra("nonce", nonce);
         startActivityForResult(myIntent, REQUEST_TEST);
     }
@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode == Activity.RESULT_OK) {
                 String nonce = data.getStringExtra("nonce");
 
-                if (data.hasExtra("consent") && this.nonce != null && this.nonce.equals(nonce)) {
-                    boolean consent = data.getBooleanExtra("consent", false);
-                    ((TextView) findViewById(R.id.lbl_hello)).setText(String.format("Consent: %s", consent));
+                if (data.hasExtra("gpc") && this.nonce != null && this.nonce.equals(nonce)) {
+                    boolean gpc = data.getBooleanExtra("gpc", false);
+                    ((TextView) findViewById(R.id.lbl_hello)).setText(String.format("GPC: %s", gpc));
                 }
             }
         }

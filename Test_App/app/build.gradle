@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "net.kollnig.consent.gpc_android.test"
+        applicationId "net.kollnig.gpc_android.test"
         minSdk 24
         targetSdk 32
         versionCode 1

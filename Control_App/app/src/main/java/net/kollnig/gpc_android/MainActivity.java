@@ -1,16 +1,11 @@
-package net.kollnig.consent.gpc_android;
+package net.kollnig.gpc_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.widget.CompoundButton;
 import android.widget.Switch;
-
-import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -19,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        Switch swConsent = findViewById(R.id.swConsent);
+        Switch swControl = findViewById(R.id.swControl);
 
-        boolean consent = prefs.getBoolean("consent", false);
-        swConsent.setChecked(consent);
+        boolean gpc = prefs.getBoolean("gpc", false);
+        swControl.setChecked(gpc);
 
-        swConsent.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            prefs.edit().putBoolean("consent", isChecked).apply();
+        swControl.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            prefs.edit().putBoolean("gpc", isChecked).apply();
         });
     }
 }

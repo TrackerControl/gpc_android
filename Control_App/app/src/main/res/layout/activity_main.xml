@@ -7,10 +7,11 @@
     tools:context=".MainActivity">
 
     <Switch
-        android:id="@+id/swConsent"
-        android:layout_width="wrap_content"
+        android:id="@+id/swControl"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Allow data collection"
+        android:text="Do not sell or share my personal information with third parties"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,4 +1,4 @@
-package net.kollnig.consent.gpc_android;
+package net.kollnig.gpc_android;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ public class ConsentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean consent = prefs.getBoolean("consent", false);
-        getIntent().putExtra("consent", consent);
+        boolean gpc = prefs.getBoolean("gpc", false);
+        getIntent().putExtra("gpc", gpc);
         setResult(RESULT_OK, getIntent());
         finish();
     }
