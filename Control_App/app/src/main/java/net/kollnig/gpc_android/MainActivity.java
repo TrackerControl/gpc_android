@@ -13,14 +13,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences prefs = getSharedPreferences("gpc_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
         Switch swControl = findViewById(R.id.swControl);
 
         boolean gpc = prefs.getBoolean("gpc", false);
         swControl.setChecked(gpc);
 
         swControl.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            prefs.edit().putBoolean("gpc", isChecked).apply();
+            editor.putBoolean("gpc", isChecked).apply();
         });
     }
 }
