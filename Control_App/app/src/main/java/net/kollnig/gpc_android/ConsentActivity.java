@@ -13,7 +13,7 @@ public class ConsentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences prefs = getSharedPreferences("gpc_prefs", MODE_PRIVATE);
         boolean gpc = prefs.getBoolean("gpc", false);
         getIntent().putExtra("gpc", gpc);
         setResult(RESULT_OK, getIntent());
